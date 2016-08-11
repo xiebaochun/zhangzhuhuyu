@@ -8,6 +8,7 @@ function build(){
 	exec('cp -r ./src/css ./dest');
 	exec('cp -r ./src/js ./dest');
 	exec('cp -r ./src/favicon.ico ./dest');
+	exec('cp -r ./src/img ./dest');
 	compile('./src/tpl');
 }
 

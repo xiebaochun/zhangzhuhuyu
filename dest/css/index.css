@@ -1,9 +1,17 @@
-.banner{
-	height:250px;
-	margin-bottom:10px;
-	background-position: center -80px;
-}
-
-@media screen and (max-width:1000px){
-  .banner{height:180px;height:40vw;}
-}
+.section{padding-top:50px;}
+.section .title{display: block;margin:10px auto;}
+.section h4{font-size: 20px;margin:5px 0;}
+.section p{width:80%;display: inline-block;line-height: 25px;}
+.game-list li{display: inline-block;margin-top: 20px;width:33.33%;}
+.game-list li img{width:90%;}
+.our-dream{margin:30px 0;padding:30px 0;background-image: url(../img/dream_bg.jpg);background-size: cover;}
+.dreams{margin:2em 0;}
+.dreams li{display: inline-block;width: 30%;height:3em;color:#fff;}
+.dreams li span{padding-top: 10px;display: inline-block;}
+.dreams li img{height: 100%;}
+.co-list{text-align: center;}
+.co-list li{display: inline-block;width:12%;margin:0 30px;}
+.co-list li img{width:60%;}
+.inner-contact{text-align:center;margin:0px 0;_margin-bottom:0;_height:250px;_background-image:url(../img/inner_bg.jpg);background-size:cover;color:#333;}
+.inner-contact .content{margin-top:0px;margin-left:100px;display:inline-block;text-align:left;}
+.inner-contact .content span{_letter-spacing: 4px;line-height: 25px;}
