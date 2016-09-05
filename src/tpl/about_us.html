@@ -1,0 +1,50 @@
+<%- include('inc/head') %>
+<%- include('inc/header') %> 
+<link rel="stylesheet" type="text/css" href="./css/common_content.css">
+<style type="text/css">
+	.content{
+		background-image: url(./img/bg.png);
+		background-size: 100%;
+		background-position:center;
+
+	}
+	.footer-imgs{
+		width:200px;
+		position: relative;
+		display: inline-block;
+	}
+	.footer-imgs img{
+		width:100px;
+		position: absolute;
+	}
+	.brand-1{left:50px;top:0;}
+	.brand-2{left: -5px;top:55px;}
+	.brand-3{right:-5px;top:55px;}
+</style>
+<div class="banner bg-color-blue">
+	<div class="wrap">
+		<span class="color-fff">关于我们</span>
+		<span class="color-333">Company</span>
+	</div>
+</div>
+<div class="content">
+	<div class="wrap">
+		<p>
+			
+		</p>
+		<div class="tc" style="height:200px;">
+			<div class="footer-imgs">
+				<img class="brand-1" src="./img/about_us_01.png">
+				<img class="brand-2" src="./img/about_us_02.png">
+				<img class="brand-3" src="./img/about_us_03.png">
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+  function navFocus(){
+        $("#about-us-nav").addClass("c");  
+  }
+</script>  
+<%- include('inc/footer') %> 

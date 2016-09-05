@@ -1,17 +1,82 @@
-.section{padding-top:50px;}
-.section .title{display: block;margin:10px auto;}
-.section h4{font-size: 20px;margin:5px 0;}
-.section p{width:80%;display: inline-block;line-height: 25px;}
-.game-list li{display: inline-block;margin-top: 20px;width:33.33%;}
-.game-list li img{width:90%;}
-.our-dream{margin:30px 0;padding:30px 0;background-image: url(../img/dream_bg.jpg);background-size: cover;}
-.dreams{margin:2em 0;}
-.dreams li{display: inline-block;width: 30%;height:3em;color:#fff;}
-.dreams li span{padding-top: 10px;display: inline-block;}
-.dreams li img{height: 100%;}
-.co-list{text-align: center;}
-.co-list li{display: inline-block;width:12%;margin:0 30px;}
-.co-list li img{width:60%;}
-.inner-contact{text-align:center;margin:0px 0;_margin-bottom:0;_height:250px;_background-image:url(../img/inner_bg.jpg);background-size:cover;color:#333;}
-.inner-contact .content{margin-top:0px;margin-left:100px;display:inline-block;text-align:left;}
-.inner-contact .content span{_letter-spacing: 4px;line-height: 25px;}
+.banner{
+	position: relative;
+	background-color: #333;
+	overflow: hidden;
+}
+.banner-bg{
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height: 100%;
+	z-index: 0;
+	background-image:url(../img/banner.png);
+	background-color: #333;
+	background-size: cover;
+	filter: blur(5px);
+	-webkit-filter: blur(2px);
+}
+.swiper-container{
+	width:1000px;
+	height:400px;
+	z-index: 1;
+}
+.swiper-wrapper{
+	width:100%;
+	height:400px;
+}
+.swiper-slide{
+	height:400px;
+	width:100%;
+	/*background-color: #900;*/
+	background-image:url(../img/banner.png);
+	background-size: 102% 100%;
+	background-position: center;
+}
+.content{
+	padding:20px 0;
+}
+.content .wrap > div{
+	display: inline-block;
+	vertical-align: top;
+}
+.content .wrap{
+	font-size:0;
+}
+.content .hot-game{
+	width:350px;
+	font-size:14px;
+}
+.content .news{
+	width:400px;
+	padding-right:40px;
+	font-size:14px;
+}
+.content .games{
+	width:250px;
+	font-size:14px;
+}
+.new-list li a{
+	display: inline-block;
+	width:300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.content-list-header{
+	padding:10px 0;
+}
+.game-list > li{
+	margin:5px 0;
+}
+.game-list > li > div{
+	margin-left: 10px;
+	color:#999;
+}
+.game-list > li > div > span{
+	line-height: 14px;
+}
+.game-list .platform,.game-list .app-size{
+	font-size:12px;
+}
+

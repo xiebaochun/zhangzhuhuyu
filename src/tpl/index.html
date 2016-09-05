@@ -1,69 +1,98 @@
 <%- include('inc/head') %>
 <%- include('inc/header') %>  
-  <link rel="stylesheet" type="text/css" href="./css/index.css">
-  <img class="banner" src="./img/banner.jpg">
-  <div class="wrap">
-    <div class="section p-intro tc" id="p-intro">
-      <img class="title" src="./img/p_intro_title.png">
-      <h4>掌族游戏-专注于精品游戏研发与发行</h4>
-          <ul class="game-list">
-        <li class="tl"><a href="http://http://www.zhangzugame.com/"><img src="./img/game_01.jpg"></a></li><li><a href="http://http://www.zhangzugame.com/"><img src="./img/game_02.jpg"></a></li><li class="tr"><a href="http://http://www.zhangzugame.com/"><img src="./img/game_03.jpg"></a></li>
-      </ul>
-    </div>
-    <div class="section about-us tc" id="about-us">
-      <img class="title" src="./img/about_us_title.png">
-      <div class="inline-block">
-        <img class="inline-block vm" style="width:20%;" src="./img/company.png">
-        <div class="inline-block vm tl" style="width:50%;margin-left:50px;">
-          <h4>公司简介</h4>
-          <p>广州掌族网络科技有限公司（掌族游戏）坐落在悠久的历史名城广州，是一家朝气蓬勃的新锐手机游戏运营公司，公司核心团队汇聚了有丰富手游发行和运营经验的专业人才。公司80%以上员工具有本科及本科以上学历，员工均来自国内互联网游戏公司，拥有丰富的游戏产品代理、运营推广经验。
-          </p>
-        </div>
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="stylesheet" type="text/css" href="./js/vendor/swiper/swiper.min.css">
+<div class="banner">
+    <div class="banner-bg"></div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
       </div>
+      <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
     </div>
-  </div>
-  <div class="our-dream">
-    <div class="wrap tc">
-      <h3 style="color:#fff;">我们理念</h3>
-      <ul class="dreams">
-        <li><img src="./img/dream_01.png"><br><span>创意为先</span></li>
-        <li><img src="./img/dream_02.png"><br><span>合作共赢</span></li>
-        <li><img src="./img/dream_03.png"><br><span>方向专注</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="section cooperation" id="cooperation">
-      <img class="title" src="./img/c_title.png">
-      <h4></h4>
-      <ul class="co-list">
-        <li><img src="./img/c_01.png"><br><span>全域代理</span></li>
-        <li><img src="./img/c_02.png"><br><span>渠道合作</span></li>
-        <li><img src="./img/c_03.png"><br><span>数据共享</span></li>
-        <li><img src="./img/c_04.png"><br><span>舆情关系</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="section contact-us tc" id="contact-us">
+</div>
+<div class="content">
     <div class="wrap">
-      <img class="title" src="./img/contact_us_title.png">
-      <h4 style="height:15px;"></h4>
-            </p>
-      <div class="inline-block inner-contact">
-        <div class="content">
-          <span>商务合作</span><br>
-          <span>手机：13902321153</span><br>
-          <span>QQ：61760709</span><br>
-          <span>邮箱：<span style="letter-spacing: 0px;">61760709@qq.com</span><br>
-          <span>地址：广州市天河区黄埔大道中149号二楼</span>
-        </div>  
-      </div>
-    </div>
-  </div> 
+		<div class="hot-game">
+		    <div class="content-list-header">
+		    	<a href="">热门游戏</a>
+		    	<span class="color-red f12">Hot</span>
+		    </div>
+		    <img style="_width:200px;" src="./img/ysj.png">
+		</div>
+		<div class="news">
+			<div class="content-list-header">
+				<a href="">新闻</a>
+				<span class="color-gray f12">News</span>
+				<a href="" class="color-blue fr">更多>></a>
+			</div>
+			<ul class="new-list">
+				<li class="color-999">
+					<a class="color-999" href="">新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</a>
+					<span class="create-date fr">08/03</span>
+				</li>
+				<li class="color-999">
+					<a class="color-999" href="">新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</a>
+					<span class="create-date fr">08/03</span>
+				</li>
+				<li class="color-999">
+					<a class="color-999" href="">新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</a>
+					<span class="create-date fr">08/03</span>
+				</li>
+			</ul>
+		</div>
+		<div class="games">
+			<div class="content-list-header">
+				<a href="">游戏</a>
+				<span class="color-gray f12">Games</span>
+				<a href="" class="color-blue fr">更多>></a>
+			</div>
+			<ul class="game-list">
+				<li>
+					<img src="./img/wzsw.png">
+					<div class="inline-block">
+						<span class="game-name">Game Name</span><br/>
+						<span class="platform">Android/IOS</span><br />
+						<span class="app-size">35.82M</span>
+					</div>
+				</li>
+				<li>
+					<img src="./img/tl.png">
+					<div class="inline-block">
+						<span class="game-name">Game Name</span><br/>
+						<span class="platform">Android/IOS</span><br />
+						<span class="app-size">35.82M</span>
+					</div>
+				</li>
+				<li>
+					<img src="./img/anyue.png">
+					<div class="inline-block">
+						<span class="game-name">Game Name</span><br/>
+						<span class="platform">Android/IOS</span><br />
+						<span class="app-size">35.82M</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
+
+<script type="text/javascript" src="./js/vendor/swiper/swiper.min.js"></script>
 <script type="text/javascript">
   function navFocus(){
         $("#index-nav").addClass("c");  
   }
+  $(function(){
+      var mySwiper = new Swiper ('.swiper-container', {
+          loop: true,
+          
+          // If we need pagination
+          pagination: '.swiper-pagination',
+
+      }) 
+  });
 </script>  
 <%- include('inc/footer') %> 

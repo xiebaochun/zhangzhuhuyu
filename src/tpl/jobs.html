@@ -1,0 +1,54 @@
+<%- include('inc/head') %>
+<%- include('inc/header') %> 
+<link rel="stylesheet" type="text/css" href="./css/common_content.css">
+<style type="text/css">
+	.content .wrap{padding-top: 40px;}
+	.jobs-list{}
+	.jobs-item{font-size:0;}
+	.jobs-item > li{
+		font-size:14px;
+		line-height: 30px;
+		display: inline-block;
+		width:20%;
+		text-align: center;
+	}
+	.jobs-header{background-color: #333;color:#fff;}
+	.jobs-item-detail{border-bottom: 1px solid #eee;}
+</style>
+<div class="banner bg-color-blue">
+	<div class="wrap">
+		<span class="color-fff">人才招聘</span>
+		<span class="color-333">Jobs</span>
+	</div>
+</div>
+<div class="content">
+	<div class="wrap">
+		<ul class="jobs-list">
+			<li>
+				<ul class="jobs-item jobs-header">
+					<li>职位名称</li>
+					<li>职位类别</li>
+					<li>招聘人数</li>
+					<li>工作性质</li>
+					<li>应聘通道</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="jobs-item jobs-item-detail">
+					<li>前端</li>
+					<li>技术类</li>
+					<li>100</li>
+					<li>全职</li>
+					<li><a class="color-blue" href="">点此投递</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+  function navFocus(){
+        $("#jobs-nav").addClass("c");  
+  }
+</script>  
+<%- include('inc/footer') %> 

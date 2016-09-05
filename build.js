@@ -5,10 +5,13 @@ require(`shelljs/global`);
 module.exports = build;
 
 function build(){
-	exec('cp -r ./src/css ./dest');
-	exec('cp -r ./src/js ./dest');
+	if(!fs.exists('./dest')){
+		mkdirsSync('./dest');
+	}
+	exec('cp -r ./src/css ./dest/');
+	exec('cp -r ./src/js ./dest/');
 	exec('cp -r ./src/favicon.ico ./dest');
-	exec('cp -r ./src/img ./dest');
+	exec('cp -r ./src/img ./dest/');
 	compile('./src/tpl');
 }
 
