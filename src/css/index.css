@@ -79,4 +79,9 @@
 .game-list .platform,.game-list .app-size{
 	font-size:12px;
 }
-
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    border-radius: 0;
+   	width:30px;
+   	height: 5px;
+   	background-color: #fff;
+}
