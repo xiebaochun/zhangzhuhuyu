@@ -28,7 +28,7 @@ function getPostList(postPath){
 				if(info){
 					//console.log('>>>>>>>>' + typeof JSON.parse(info));
 					var item = JSON.parse(info);
-					postList.push({link:'./'+dir.replace('./src/','')+'/'+file_name.substr(0,file_name.length -3)+'.html',info:JSON.parse(info)});
+					postList.push({link:'http://localhost:3000'+dir.replace(/.+src/,'')+'/'+file_name.substr(0,file_name.length -3)+'.html',info:JSON.parse(info)});
 				}
 			}			
 		}

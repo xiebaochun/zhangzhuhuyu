@@ -122,7 +122,7 @@ function buildByRemarkable(){
 
 			postListHtml += '<li class="color-999">'+
 								'<a class="color-999" href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a>'+
-								'<span class="create-date fr">'+postList[index].info.createtime.replace(/\d{4}-/,'').replace(/-/g,'/')+'</span>'+
+								'<span class="create-date fr color-999">'+postList[index].info.createtime.replace(/\d{4}-/,'').replace(/-/g,'/')+'</span>'+
 							'</li>'
 		}
 		var layoutHtml = fs.readFileSync(__dirname +'/build/index.html');
@@ -143,7 +143,7 @@ function buildByRemarkable(){
 								'<a href="'+postList[index].link+'">'+
 									'<div class="news-item-header">'+
 										'<span class="news-name f20">'+(postList[index].info.title||'No title')+'</span>'+
-										'<span class="fr">'+postList[index].info.createtime+'</span>'+
+										'<span class="fr color-999">'+postList[index].info.createtime+'</span>'+
 									'</div>'+
 									'<p class="desc">'+postList[index].desc+'</p>'+
 								'</a>'+
