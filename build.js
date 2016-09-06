@@ -1,18 +1,20 @@
 var fs = require('fs');
 var path = require('path');
+var newsRender = require('./newsrender');
 require(`shelljs/global`);
 
 module.exports = build;
 
 function build(){
-	if(!fs.exists('./dest')){
-		mkdirsSync('./dest');
+	if(!fs.exists('./build')){
+		mkdirsSync('./build');
 	}
-	exec('cp -r ./src/css ./dest/');
-	exec('cp -r ./src/js ./dest/');
-	exec('cp -r ./src/favicon.ico ./dest');
-	exec('cp -r ./src/img ./dest/');
+	exec('cp -r ./src/css ./build/');
+	exec('cp -r ./src/js ./build/');
+	exec('cp -r ./src/favicon.ico ./build');
+	exec('cp -r ./src/img ./build/');
 	compile('./src/tpl');
+	newsRender();
 }
 
 
@@ -31,7 +33,7 @@ function compile(dir){
 			var str = fs.readFileSync(__dirname + '/src/tpl/' + fileName).toString();
 			var html = parseHtml(str);	
 			//console.log(str);
-			var buildPath = './dest/'+dir.replace('./src/tpl','');
+			var buildPath = './build/'+dir.replace('./src/tpl','');
 			if(!fs.existsSync(buildPath)){
 				mkdirsSync(buildPath);
 			}

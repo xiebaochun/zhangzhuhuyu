@@ -1,6 +1,6 @@
 <%- include('inc/head') %>
 <%- include('inc/header') %> 
-<link rel="stylesheet" type="text/css" href="./css/common_content.css">
+<link rel="stylesheet" type="text/css" href="/css/common_content.css">
 <style type="text/css">
 	.news-item{padding:10px 0;border-bottom: 1px solid #666;}
 	.desc{padding:10px 0;color:#666;}
@@ -8,14 +8,14 @@
 </style>
 <div class="banner bg-color-blue">
 	<div class="wrap">
-		<span class="color-fff">新闻动态</span>
-		<span class="color-333">News</span>
+		<span class="banner-text1">新闻动态</span>
+		<span class="banner-text2">News</span>
 	</div>
 </div>
 <div class="content">
 	<div class="wrap">
 		<ul class="news-list">
-			<li class="news-item">
+			<!-- <li class="news-item">
 				<a href="./news_detail.html">
 					<div class="news-item-header">
 						<span class="news-name f20">新闻标题新闻标题新闻标题新闻标题</span>
@@ -25,8 +25,8 @@
 						介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍。
 					</p>
 				</a>
-			</li>
-			
+			</li> -->
+			{$news_list}
 		</ul>
 	</div>
 </div>

@@ -1,23 +1,27 @@
 <%- include('inc/head') %>
 <%- include('inc/header') %> 
-<link rel="stylesheet" type="text/css" href="./css/common_content.css">
+<link rel="stylesheet" type="text/css" href="/css/common_content.css">
+<link rel="stylesheet" type="text/css" href="/css/markdown.css">
 <style type="text/css">
-
+	.news-header{padding:10px 0;border-bottom: 1px solid #666;}
+	.news-content{padding-top:20px;}
 </style>
 <div class="banner bg-color-blue">
 	<div class="wrap">
-		<span class="color-fff">新闻动态</span>
-		<span class="color-333">News</span>
+		<span class="banner-text1">新闻动态</span>
+		<span class="banner-text2">News</span>
 	</div>
 </div>
 <div class="content">
 	<div class="wrap">
 		<div class="news-header">
-			<span class="title">标题</span>
-			<span class="create-date fr">2016/09/01</span>
+			<span class="title f18 vb">{$title}</span>
+			<span class="create-date fr f12 color-999 vb mt10">{$createtime}</span>
 		</div>
 		<div class="news-content">
-			
+			<div class="markdown-body">
+				{$markdown}	
+			</div>
 		</div>
 	</div>
 </div>

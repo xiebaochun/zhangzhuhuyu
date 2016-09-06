@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-
+require('./server');
 // var watch = require('gulp-watch');
 
 // var filter = require('gulp-filter');
@@ -17,7 +17,8 @@ gulp.task('watch',function(){
     //     .pipe(changeF)
     //     .pipe(gulp.dest('build'));
     gulp.watch(['./src/*/*.{html,md,css,js}'], ['build']);
-  
+
+    
 });
 
 gulp.task('build',function(){

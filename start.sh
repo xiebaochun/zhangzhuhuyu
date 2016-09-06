@@ -1,0 +1,2 @@
+./tools/watch.sh
+$SHELL
