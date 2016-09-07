@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 
 app.use('/',express.static(path.resolve(__dirname ,'build')));
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', __dirname + '/admin/views')
@@ -25,16 +24,32 @@ var router = express.Router();
 router.get('/',function(req, res){
 	var post = require('./admin/lib/post');
 	var news_list = post.getPostList(__dirname + '/src/posts');
-	//console.log(news_list);
+	console.log(news_list);
 	res.render('index', { title: '新闻管理' , news_list:news_list});
 });
 router.get('/add/:postName',function(req, res){
 	exec('node new ' + req.params.postName);
-	console.log(req.params.postName);
+	//console.log(req.params.postName);
 	setTimeout(function(){
 		build();
 	},500);
 	res.end('添加成功!');
+	//res.render('add', { title: '添加新文章' });
+
+});
+router.get('/delete/:fileName',function(req, res){
+	//exec('node new ' + req.params.fileName);
+	var fileName = req.params.postName;
+
+	var filePath = "./src/posts/" + fileName; 
+
+	fs.unlinkSync(filePath);
+
+	console.log(req.params.postName);
+	setTimeout(function(){
+		build();
+	},500);
+	res.end('删除成功!');
 	//res.render('add', { title: '添加新文章' });
 
 });

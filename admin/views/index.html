@@ -2,18 +2,43 @@
 <html>
 <head>
 	<title>掌族游戏后台管理</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style type="text/css">
+		*{box-sizing: border-box;}
+		body{padding:10px;}
+		.news-lists{width:500px;}
+		.news-lists td{text-align:center;}
+		.news-lists th{text-align:center;}
+	</style>
 </head>
 <body>
 	<h1><%= title %></h1>
-	<label>标题：</label>
-	<input type="text" id="news-name" name="">
-	<button id="add-news">添加</button>
+	<h1>&nbsp;</h1>
+	<label class="text-primary">标题：</label>
+	<input type="text" class="form-control" style="display:inline-block;width:300px;" id="news-name" name="">
+	<button class="btn btn-success" id="add-news">添加</button>
 	<h2>新闻列表</h2>
-	<ul>
+	<table class="table table-bordered news-lists">
+		<thead> 
+			<tr> 
+				<th>#</th> 
+				<th>新闻</th> 
+				<th>操作</th> 
+			</tr> 
+		</thead>
 		<% for(var i=0; i<news_list.length; i++) {%>
-		   <li><a target="_blank" href="<%= news_list[i].link %>"><%= news_list[i].info.title %></a></li>
+			<tr class="active">
+				<th class="active"><%= (i+1) %></th>
+				<td class="active"><a class="text-primary" target="_blank" href="<%= news_list[i].link %>"><%= news_list[i].info.title %></a></td>
+				<td class="active">
+					<button class="btn btn-primary edit-news-btn">编辑</button>&nbsp;&nbsp;
+					<button class="btn btn-danger delete-news-btn" data-filename="<%= news_list[i].fileName %>">删除</button>
+				</td>
+			</tr>
 		<% } %>
-	</ul>
+	</table>
 	<script type="text/javascript">
 		var add_news = document.getElementById('add-news');
 		var news_name_input = document.getElementById('news-name');
@@ -57,6 +82,13 @@
 			ajaxRequest.open("GET", url , true);
 			ajaxRequest.send(null); 
 		}
+		$(function(){
+			$('.delete-news-btn').click(function(){
+				var fileName = $(this).data('fileName');
+				//alert('确定要删除？');
+				ajax('http://localhost:3000/admin/delete/' + fileName);
+			});
+		});
 	</script>
 </body>
 </html>
