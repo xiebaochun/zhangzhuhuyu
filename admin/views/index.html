@@ -7,7 +7,7 @@
 	<h1><%= title %></h1>
 	<label>标题：</label>
 	<input type="text" id="news-name" name="">
-	<button id="add-news" href="./admin/add">添加</button>
+	<button id="add-news">添加</button>
 	<h2>新闻列表</h2>
 	<ul>
 		<% for(var i=0; i<news_list.length; i++) {%>
@@ -19,7 +19,7 @@
 		var news_name_input = document.getElementById('news-name');
 		add_news.addEventListener('click', function(){
 			var new_name = news_name_input.value;
-			ajax('./add/' + new_name);
+			ajax('http://localhost:3000/admin/add/' + new_name);
 		});
 
 		function ajax(url, callback){
