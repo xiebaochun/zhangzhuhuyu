@@ -2,7 +2,7 @@
 html{font-family: '微软雅黑';font-size: 1.5vw;font-size: 14px;}
 a{text-decoration: none;color:#666;}
 ul,li{list-style: none;}
-.wrap{width:1000px;width:60%;min-width:1000px;margin:0 auto;}
+.wrap{width:1000px;min-width:1000px;margin:0 auto;}
 .tc{text-align: center;}
 .tl{text-align: left;}
 .tr{text-align: right;}
