@@ -82,6 +82,11 @@
           preventClicksPropagation:false,
           // If we need pagination
           pagination: '.swiper-pagination',
+          onSlideChangeEnd:function(swiper){
+          	swiper.activeIndex = swiper.activeIndex == 4? 1 : swiper.activeIndex;
+          	console.log(swiper.activeIndex);
+          	$('.banner-bg').css({'background-image':$('#ad'+swiper.activeIndex).css('background-image')});
+          }
 
       }) 
   });
