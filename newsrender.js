@@ -116,12 +116,13 @@ function buildByRemarkable(){
 
 	function buildIndex(postList){
 		var postListHtml = '';
-		var news_length = postList.length <= 6 ? postList.length : 6; 
+		var news_length = postList.length <= 6 ? postList.length : 6;
+		postList.reverse();
 		for(var index = 0;index < news_length;index++){
 			//postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
 
 			postListHtml += '<li class="color-999">'+
-								'<a class="color-999" href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a>'+
+								'<a class="color-666" href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a>'+
 								'<span class="create-date fr color-999">'+postList[index].info.createtime.replace(/\d{4}-/,'').replace(/-/g,'/')+'</span>'+
 							'</li>'
 		}
@@ -135,7 +136,7 @@ function buildByRemarkable(){
 	}
 	function buildNews(postList){
 		var postListHtml = '';
-		
+		//postList.reverse();
 		for(var index = 0;index<postList.length;index++){
 			//postListHtml += '<li><a href="'+postList[index].link+'">'+(postList[index].info.title||'No title')+'</a></li>';
 

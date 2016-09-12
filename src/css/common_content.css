@@ -1,7 +1,7 @@
 .banner{height:80px;}
 .banner .wrap{font-size:32px;line-height: 80px;padding-left:20px;background-image: url(/img/bg2.png);
 background-size:100% 100%;}
-.content{min-height:300px;background-color: #EEE;}
+.content{min-height:300px;padding:20px 0;padding-bottom:40px;background-color: #EEE;}
 .content .wrap{min-height:450px;background-color: #fff;padding:10px 20px;}
 .banner-text1{font-family: monospace;color:#fff;}
 .banner-text2{font-family: monospace;font-size:28px;color:#333;}

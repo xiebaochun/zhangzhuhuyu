@@ -6,9 +6,9 @@
     <div class="banner-bg"></div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
+        <div class="swiper-slide" id="ad1"><a href="http://www.zhangzugame.com"></a></div>
+        <div class="swiper-slide" id="ad2"><a href="http://www.zhangzugame.com"></a></div>
+        <div class="swiper-slide" id="ad3"><a href="http://www.zhangzugame.com"></a></div>
       </div>
       <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
     </div>
@@ -20,7 +20,7 @@
 		    	<a class="f18" href="/game_center.html">热门游戏</a>
 		    	<span class="color-red f12" style="font-weight:700;font-family:cuisive;">Hot</span>
 		    </div>
-		    <img style="_width:200px;" src="./img/ysj.png">
+		    <a href="http://www.zhangzugame.com"><img style="_width:200px;" src="./img/ysj.png"></a>
 		</div>
 		<div class="news">
 			<div class="content-list-header">
@@ -42,25 +42,25 @@
 				<li>
 					<img src="./img/wzsw.png">
 					<div class="inline-block">
-						<span class="game-name">Game Name</span><br/>
+						<span class="game-name">王者守卫</span><br/>
 						<span class="platform">Android/IOS</span><br />
-						<span class="app-size">35.82M</span>
+						<span class="app-size">45.32M</span>
 					</div>
 				</li>
 				<li>
 					<img src="./img/tl.png">
 					<div class="inline-block">
-						<span class="game-name">Game Name</span><br/>
+						<span class="game-name">屠龙传世</span><br/>
 						<span class="platform">Android/IOS</span><br />
-						<span class="app-size">35.82M</span>
+						<span class="app-size">229.79M</span>
 					</div>
 				</li>
 				<li>
 					<img src="./img/anyue.png">
 					<div class="inline-block">
-						<span class="game-name">Game Name</span><br/>
+						<span class="game-name">暗月城堡</span><br/>
 						<span class="platform">Android/IOS</span><br />
-						<span class="app-size">35.82M</span>
+						<span class="app-size">28.69M</span>
 					</div>
 				</li>
 			</ul>
@@ -77,7 +77,9 @@
   $(function(){
       var mySwiper = new Swiper ('.swiper-container', {
           loop: true,
-          
+          autoplay:5000,
+          speed:1000,
+          preventClicksPropagation:false,
           // If we need pagination
           pagination: '.swiper-pagination',
 

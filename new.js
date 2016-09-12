@@ -32,7 +32,7 @@ if(!fs.existsSync(dateDir)){
 var initPostText = '===\n\
 {\n\
     "title":"'+postName+'",\n\
-    "author":"xiebaochun",\n\
+    "author":"zhangzugame",\n\
     "categories":["'+cates+'"],\n\
     "tags":[""],\n\
     "createtime":"'+date.toLocaleDateString()+'"\n\
