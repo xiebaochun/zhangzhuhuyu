@@ -71,12 +71,15 @@
 	font-size:14px;
 }
 .new-list{
-	margin-top: 30px;
+	margin-top: 10px;
+}
+.new-list > li{
+	line-height: 21px;
 }
 .new-list li a{
 	display: inline-block;
 	width:300px;
-	line-height: 20px;
+	_line-height: 25px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
